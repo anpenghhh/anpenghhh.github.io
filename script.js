@@ -15,6 +15,12 @@
 
   const items = [...document.querySelectorAll('[data-reveal]')];
 
+  // 在对比页的 iframe 里时直接显示，不等滚动触发
+  if (window.self !== window.top) {
+    items.forEach((el) => el.classList.add('is-in'));
+    return;
+  }
+
   if (!('IntersectionObserver' in window)) {
     items.forEach((el) => el.classList.add('is-in'));
     return;

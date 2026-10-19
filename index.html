@@ -6,12 +6,15 @@
 <title>你的名字 — 后端工程师</title>
 <meta name="description" content="后端工程师，做平台系统、任务调度与失败处理。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314120F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23F6F4EF' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="editorial.css" id="theme-css">
 <script>
   (function () {
-    var saved = localStorage.getItem('theme');
-    var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-    document.documentElement.dataset.theme = saved || (prefersLight ? 'light' : 'dark');
+    // 对比用：?theme=swiss | dark | warm | editorial
+    var themes = { swiss: 1, dark: 1, warm: 1, editorial: 1 };
+    var t = new URLSearchParams(location.search).get('theme');
+    if (t && themes[t]) {
+      document.getElementById('theme-css').href = t + '.css';
+    }
   })();
 </script>
 </head>
