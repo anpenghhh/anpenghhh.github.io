@@ -1,4 +1,4 @@
-// 两件小事：切换深浅色、跟随滚动高亮导航。没有依赖。
+// 主题切换 + 滚动入场。没有依赖。
 (function () {
   const root = document.documentElement;
   const toggle = document.getElementById('themeToggle');
@@ -9,31 +9,27 @@
     try {
       localStorage.setItem('theme', next);
     } catch (e) {
-      // 隐私模式下 localStorage 不可用，忽略即可
+      // 隐私模式下 localStorage 不可用，忽略
     }
   });
 
-  const links = [...document.querySelectorAll('.nav-link')];
-  const sections = links
-    .map((link) => document.querySelector(link.getAttribute('href')))
-    .filter(Boolean);
+  const items = [...document.querySelectorAll('[data-reveal]')];
 
-  if (!('IntersectionObserver' in window) || !sections.length) return;
+  if (!('IntersectionObserver' in window)) {
+    items.forEach((el) => el.classList.add('is-in'));
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        links.forEach((link) => {
-          link.classList.toggle(
-            'active',
-            link.getAttribute('href') === '#' + entry.target.id
-          );
-        });
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);
       });
     },
-    { rootMargin: '-45% 0px -50% 0px' }
+    { rootMargin: '0px 0px -12% 0px' }
   );
 
-  sections.forEach((section) => observer.observe(section));
+  items.forEach((el) => observer.observe(el));
 })();

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>你的名字 — 后端工程师</title>
 <meta name="description" content="后端工程师，做平台系统、任务调度与失败处理。">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d9488'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='17' font-weight='600' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314120F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='18' fill='%23F6F4EF' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <script>
   (function () {
@@ -16,140 +16,137 @@
 </script>
 </head>
 <body>
-<a class="skip-link" href="#main">跳到正文</a>
 
-<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深浅色">
-  <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-  <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
-</button>
+<div class="page">
 
-<div class="layout">
-  <header class="sidebar">
-    <div class="sidebar-top">
-      <!-- TODO: 换成你的名字 -->
-      <h1>你的名字</h1>
-      <!-- TODO: 一句话定位，格式「角色 · 方向」 -->
-      <h2>后端工程师 · 平台与调度</h2>
-      <!-- TODO: 一句更具体的话，说清你让什么变得更好了 -->
-      <p class="tagline">做的是让任务跑对、跑稳、出问题能查出来的那些事。</p>
-
-      <nav aria-label="页面导航">
-        <ul>
-          <li><a href="#about" class="nav-link"><span class="bar"></span>关于</a></li>
-          <li><a href="#projects" class="nav-link"><span class="bar"></span>项目</a></li>
-          <li><a href="#stack" class="nav-link"><span class="bar"></span>技术栈</a></li>
-          <li><a href="#contact" class="nav-link"><span class="bar"></span>联系</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <ul class="social" aria-label="外部链接">
-      <li><a href="https://github.com/anpenghhh" aria-label="GitHub" target="_blank" rel="noopener">
-        <svg class="filled" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-      </a></li>
-      <!-- TODO: 换成你的真实邮箱 -->
-      <li><a href="mailto:hi@example.com" aria-label="邮箱">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
-      </a></li>
-    </ul>
+  <header class="masthead">
+    <span class="masthead-label">Portfolio — 2026</span>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深浅色">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" /><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg>
+    </button>
   </header>
 
-  <main id="main">
-    <section id="about" aria-labelledby="about-title">
-      <h3 id="about-title" class="section-title">关于</h3>
-      <!-- TODO: 3-4 句，写你实际在做什么、在意什么。不要复述简历。 -->
-      <p>我是一名后端工程师，主要在做平台类系统：任务调度、执行链路、能力编排。比起堆功能，我更在意系统出错时的表现 —— 失败怎么分级、重试怎么收敛、出问题能不能被定位。</p>
-      <p>最近在做的一件事，是把散落在各个模块里的设计经验收敛成规则：什么样的能力算接入完成、失败到什么程度该放弃、哪些重试是纯粹的浪费。<a href="#projects">这些沉淀在项目里能看到</a>。</p>
+  <main>
+    <!-- ============ 首屏 ============ -->
+    <section class="hero">
+      <!-- TODO: 你的角色，一两个词 -->
+      <p class="kicker">后端工程师 · 平台与调度</p>
+      <!-- TODO: 换成你的名字 -->
+      <h1>你的名字</h1>
+      <!-- TODO: 一两句话说清你在做什么、在意什么 -->
+      <p class="lede">
+        做的是让任务跑对、跑稳、出问题能查出来的那些事。关心的不是功能堆了多少，
+        而是系统在出错时的样子：失败怎么分级、重试怎么收敛、问题能不能被定位。
+      </p>
+      <p class="hero-meta">
+        <a href="https://github.com/anpenghhh" target="_blank" rel="noopener">GitHub</a>
+        <span class="sep">/</span>
+        <!-- TODO: 换成真实邮箱 -->
+        <a href="mailto:hi@example.com">Email</a>
+        <span class="sep">/</span>
+        <a href="#projects">项目</a>
+      </p>
     </section>
 
-    <section id="projects" aria-labelledby="projects-title">
-      <h3 id="projects-title" class="section-title">精选项目</h3>
-      <p class="section-note">每个都写清解决了什么问题、我做了什么、结果如何。</p>
+    <!-- ============ 01 关于 ============ -->
+    <section id="about" class="block" data-reveal>
+      <header class="block-head">
+        <span class="num">01</span>
+        <h2>关于</h2>
+      </header>
+      <div class="prose">
+        <!-- TODO: 3-4 句，写你实际在做什么。不要复述简历。 -->
+        <p>我是一名后端工程师，主要在做平台类系统：任务调度、执行链路、能力编排。比起堆功能，我更在意系统出错时的表现。</p>
+        <p>最近在做的一件事，是把散落在各个模块里的设计经验收敛成规则：什么样的能力算接入完成、失败到什么程度该放弃、哪些重试是纯粹的浪费。这类东西写在文档里没人看，做成约束反而跑得下去。</p>
+      </div>
+    </section>
 
-      <ul class="project-list">
-        <!-- TODO: 项目 1，换成你最有说服力的那个 -->
+    <!-- ============ 02 项目 ============ -->
+    <section id="projects" class="block" data-reveal>
+      <header class="block-head">
+        <span class="num">02</span>
+        <h2>精选项目</h2>
+      </header>
+
+      <ul class="works">
+        <!-- TODO: 换成你最有说服力的项目 -->
         <li>
-          <a class="project" href="#projects">
-            <div class="project-head">
-              <h4>任务调度平台</h4>
-              <span class="project-arrow" aria-hidden="true">→</span>
+          <a class="work" href="#projects">
+            <span class="work-index">01</span>
+            <div class="work-body">
+              <h3>任务调度平台</h3>
+              <p>把原本靠人工触发的批量任务收进统一调度，支持优先级、并发控制与失败重试。上线后运维手动介入的次数明显下降。</p>
+              <p class="work-stack">Spring Boot · Redis · MySQL · 调度</p>
             </div>
-            <p>把原本靠人工触发的批量任务收进统一调度，支持优先级、并发控制与失败重试。上线后运维手动介入的次数明显下降。</p>
-            <ul class="tags">
-              <li>Spring Boot</li><li>Redis</li><li>MySQL</li><li>调度</li>
-            </ul>
+            <span class="work-arrow" aria-hidden="true">↗</span>
           </a>
         </li>
 
-        <!-- TODO: 项目 2 -->
         <li>
-          <a class="project" href="#projects">
-            <div class="project-head">
-              <h4>工具能力基类与失败分级</h4>
-              <span class="project-arrow" aria-hidden="true">→</span>
+          <a class="work" href="#projects">
+            <span class="work-index">02</span>
+            <div class="work-body">
+              <h3>工具能力基类与失败分级</h3>
+              <p>把散落的工具接入收敛成统一抽象：每类能力声明自己的前置条件与失败语义，接入方不用再各自处理。新工具接入的成本大幅降低。</p>
+              <p class="work-stack">Java · 抽象设计 · 契约约束</p>
             </div>
-            <p>把散落的工具接入收敛成统一抽象：每类能力声明自己的前置条件与失败语义，接入方不用再各自处理。新工具接入的成本大幅降低。</p>
-            <ul class="tags">
-              <li>Java</li><li>抽象设计</li><li>契约约束</li>
-            </ul>
+            <span class="work-arrow" aria-hidden="true">↗</span>
           </a>
         </li>
 
-        <!-- TODO: 项目 3 -->
         <li>
-          <a class="project" href="#projects">
-            <div class="project-head">
-              <h4>重试策略与失败收敛</h4>
-              <span class="project-arrow" aria-hidden="true">→</span>
+          <a class="work" href="#projects">
+            <span class="work-index">03</span>
+            <div class="work-body">
+              <h3>重试策略与失败收敛</h3>
+              <p>按可重试与不可重试区分失败类型，给不同等级配不同的退避与熔断策略，减少无效重试对下游造成的压力。</p>
+              <p class="work-stack">Java · 容错 · 可观测性</p>
             </div>
-            <p>按可重试 / 不可重试区分失败类型，给不同等级配不同的退避与熔断策略，减少无效重试对下游造成的压力。</p>
-            <ul class="tags">
-              <li>Java</li><li>容错</li><li>可观测性</li>
-            </ul>
+            <span class="work-arrow" aria-hidden="true">↗</span>
           </a>
         </li>
       </ul>
     </section>
 
-    <section id="stack" aria-labelledby="stack-title">
-      <h3 id="stack-title" class="section-title">技术栈</h3>
-      <p class="section-note">只放我敢说"第一天就能上手用"的东西。</p>
+    <!-- ============ 03 技术栈 ============ -->
+    <section id="stack" class="block" data-reveal>
+      <header class="block-head">
+        <span class="num">03</span>
+        <h2>技术栈</h2>
+      </header>
+      <p class="block-note">只放我敢说「第一天就能上手用」的东西。</p>
 
-      <!-- TODO: 按你的实际情况删减，控制在 12-15 项以内 -->
+      <!-- TODO: 按实际情况删减，控制在 12-15 项以内 -->
       <dl class="stack">
-        <div>
-          <dt>语言</dt>
-          <dd>Java · SQL · TypeScript</dd>
-        </div>
-        <div>
-          <dt>框架</dt>
-          <dd>Spring Boot · Spring Cloud · MyBatis</dd>
-        </div>
-        <div>
-          <dt>中间件</dt>
-          <dd>Redis · Kafka · MySQL · Elasticsearch</dd>
-        </div>
-        <div>
-          <dt>工程</dt>
-          <dd>Git · Docker · Linux · CI/CD</dd>
-        </div>
+        <div><dt>语言</dt><dd>Java · SQL · TypeScript</dd></div>
+        <div><dt>框架</dt><dd>Spring Boot · Spring Cloud · MyBatis</dd></div>
+        <div><dt>中间件</dt><dd>Redis · Kafka · MySQL · Elasticsearch</dd></div>
+        <div><dt>工程</dt><dd>Git · Docker · Linux · CI/CD</dd></div>
       </dl>
     </section>
 
-    <section id="contact" aria-labelledby="contact-title">
-      <h3 id="contact-title" class="section-title">联系</h3>
-      <p>如果有后端、平台方向的机会，或者想聊聊系统设计上的问题，欢迎直接找我。</p>
-      <p class="contact-links">
-        <a href="mailto:hi@example.com">hi@example.com</a>
-        <span aria-hidden="true">·</span>
-        <a href="https://github.com/anpenghhh" target="_blank" rel="noopener">github.com/anpenghhh</a>
+    <!-- ============ 04 联系 ============ -->
+    <section id="contact" class="block" data-reveal>
+      <header class="block-head">
+        <span class="num">04</span>
+        <h2>联系</h2>
+      </header>
+      <div class="prose">
+        <p>如果有后端、平台方向的机会，或者想聊聊系统设计上的问题，来信就行。</p>
+      </div>
+      <!-- TODO: 换成真实邮箱 -->
+      <a class="contact-mail" href="mailto:hi@example.com">hi@example.com</a>
+      <p class="contact-alt">
+        也可以在 <a href="https://github.com/anpenghhh" target="_blank" rel="noopener">github.com/anpenghhh</a> 找到我。
       </p>
     </section>
-
-    <footer>
-      <p>用纯 HTML 和 CSS 手写，没有任何框架。字体取自系统，页面不含第三方脚本。</p>
-    </footer>
   </main>
+
+  <footer class="colophon">
+    <span>手写 HTML 与 CSS，没有框架，没有第三方脚本。</span>
+    <span>2026</span>
+  </footer>
+
 </div>
 
 <script src="script.js"></script>
