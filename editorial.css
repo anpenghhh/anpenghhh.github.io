@@ -87,6 +87,10 @@ ul {
   color: var(--paper);
 }
 
+.bg-media {
+  display: none;
+}
+
 /* ---------- 页框 ---------- */
 
 .page {

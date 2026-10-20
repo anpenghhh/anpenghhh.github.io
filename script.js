@@ -15,6 +15,20 @@
 
   const items = [...document.querySelectorAll('[data-reveal]')];
 
+  // 背景视频：只在顶层页面加载，iframe 里不加载
+  if (window.self === window.top) {
+    const bg = document.getElementById('bgVideo');
+    const slow = navigator.connection && navigator.connection.saveData;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (bg && !slow && !reduce && window.innerWidth > 760) {
+      bg.addEventListener('loadeddata', () => bg.classList.add('is-ready'));
+      bg.src = 'assets/bg.mp4';
+      bg.load();
+      const playing = bg.play();
+      if (playing && playing.catch) playing.catch(() => {});
+    }
+  }
+
   // 在对比页的 iframe 里时直接显示，不等滚动触发
   if (window.self !== window.top) {
     items.forEach((el) => el.classList.add('is-in'));

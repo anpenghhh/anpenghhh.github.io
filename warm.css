@@ -73,7 +73,8 @@ ul {
   color: var(--ink);
 }
 
-.theme-toggle {
+.theme-toggle,
+.bg-media {
   display: none;
 }
 
